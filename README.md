@@ -1,17 +1,10 @@
 # Abschlussaufgabe
-# Aufgabenstellung-6
-Authors: Tim Lehmann (503417) und Tobias Krumrein (506269)
-
-With our 6th task we created a Server where you have access to a home, search, add and delete site. 
-If you set up the server successfully you first come to the home page via "localhost:3000". Here you can see what to add to the home page URL to reach the three other sites.
-When you go to "localhost:3000/search you can see all the points you current have in your databank.
-When you go to "localhost:3000/add you can add data to your databank. If done successful you will pass onto the page "localhost:3000/add_notification". On this page there you can see the data you have added.
-When you go to "localhost:3000/delete its the same like add but here you can delete the point by searching the name in the textfield and when done successful  you will pass onto the page "localhost:3000/delete_notification". 
+Abgabe des Abschlussprojektes von Tobias Krumrein (506269) & Tim Lehmann (503417) im Kurs Geosoftware 1 im SS2022.
+Ziel: Gebirge in einer Karte darstellen und beliebig erweitern.
 ----------------------------------------------------------------------------------------------------------------------------------------------
-How to start the server?
-First you need to install:
+Wie den Server starten?
 - npm install
-- npm install express
-- nmp install mongodb
-- npm install nodemon 
-- nodemon start
+- npm start
+- MongoDB connecten
+----------------------------------------------------------------------------------------------------------------------------------------------
+Bei der Homepage kann man über die Navbar auf die anderen Seiten navigieren. Auf der "Meine Gebirge" Seite kann man die Map sehen, wo die Gebirge eingeladen werden (leider funktioniert das nicht immer). Bei der "Neues Gebirge" Seite kann man anhand mehrerer Parameter einen Punkt speichern und dieser wird auch erfolgreich in der MongoDB angezeigt. Bei der "Gebirge löschen" Seite kann man den Punkt anhand der ID wieder löschen (das funktioniert nicht wirklich gut). Bei der "Route" Seite kann man anhand eines Klicks auf die Karte den Startpunkt und bei einem weiteren Klick den Endpunkt auswählen. Geplant war, dass der Startpunkt durch den aktuellen Standort-Button ersetzt wird, aber das klappt nicht.

@@ -38,7 +38,7 @@ window.onload = function () {
 function showMarkers(details,mymap) {
   for(var i = 0; i < details.length; i++) {
     let currentpoi = details[i]
-    let [long, lat] =  currentpoi.geometry.coordinates
+    let [lat, long] =  currentpoi.geometry.coordinates
 
     var marker = L.marker([lat, long]).addTo(mymap)
     let text = currentpoi.properties;
@@ -50,8 +50,9 @@ function showMarkers(details,mymap) {
 
 
 function tabelleErstellen(currentpoi) {
-  const tabelle = document.getElementById("gtabelle")
+  const tabelle = document.getElementById("gTabelle")
 
+  console.log(currentpoi)
   let row = tabelle.insertRow(-1)
   let cell0 = row.insertCell(0);
   let cell1 = row.insertCell(1);
@@ -60,11 +61,12 @@ function tabelleErstellen(currentpoi) {
   let cell4 = row.insertCell(4);
   let cell5 = row.insertCell(5);
 
-  cell0.innerHTML = currentpoi.id;
-  cell1.innerHTML = currentpoi.properties.poiname;
+  cell0.innerHTML = currentpoi._id;
+  cell1.innerHTML = currentpoi.properties.name;
   cell2.innerHTML = currentpoi.properties.hoehe;
   cell3.innerHTML = currentpoi.properties.url;
-  cell4.innerHTML = currentpoi.properties.besch;
-  cell5.innerHTML = currentpoi.geometry.coordinates; //Rundung der X-Koordinate
+  cell4.innerHTML = currentpoi.properties.description;
+  cell5.innerHTML = currentpoi.geometry.coordinates;
+  console.log(row)
 }
 
