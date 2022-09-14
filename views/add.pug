@@ -1,0 +1,52 @@
+extends layout
+
+
+block content
+  header
+
+   // adapter from https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form
+  .container
+    .row 
+      .row.justify-content-md-center
+        form(action="/add/newpoi" method="post")
+          fieldset
+            .form-group.row.mb-1
+              label.col-sm-2.col-form-label(for="poiname") POI Name
+              .col-sm-6
+                input#poiname.form-control(type="text" name="poiname" placeholder="POI Name")
+            .form-group.row.mb-1
+              label.col-sm-2.col-form-label(for="hoehe") Höhe
+              .col-sm-6
+                input#hoehe.form-control(type="text" name="hoehe" placeholder="Höhe in Meter")
+            .form-group.row.mb-1
+              label.col-sm-2.col-form-label(for="url") URL
+              .col-sm-6
+                input#url.form-control(type="text" name="url" placeholder="URL")
+            .form-group.row.mb-1
+              label.col-sm-2.col-form-label(for="url") Beschreibung 
+              .col-sm-6
+                input#besch.form-control(type="text" name="besch" placeholder="Beschreibung")
+            .form-group.row.mb-1
+              label.col-sm-2.col-form-label(for="long") Long 
+              .col-sm-6
+                input#long.form-control(type="text" name="long" placeholder="Longitude")
+            .form-group.row.mb-1
+              label.col-sm-2.col-form-label(for="lat") Lat
+              .col-sm-6
+                input#lat.form-control(type="text" name="lat" placeholder="Latitude")
+            button.btn.btn-primary.mb-2(type="submit") Send
+
+
+
+
+block foot 
+  footer
+  .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
+    span.text-white Abschlussaufgabe by Tim Lehmann & Tobias Krumrein
+
+block scripts
+  script.
+    let geojson = !{JSON.stringify(data)}
+  // Loading the API Keys (Mapbox and Here)
+  //script(src="/javascripts/apiKeys.js")
+  script(src="/javascripts/map06.js")

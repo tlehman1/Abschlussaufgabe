@@ -1,0 +1,19 @@
+extends layout
+block content
+
+    script.
+        let geojson = !{JSON.stringify(data)}
+    .container 
+        .row
+            h1.text-light Calculate the route
+            .col-12.col-md-12.mb-3
+                .card.text-dark.shadow.p-4(style= 'height: 600px;')
+                    h3 map
+                    button.btn.btn-primary.mb-2#myPlace Standort ermitteln
+                    #myfirstmap
+    
+        script(src='javascripts/navigation.js' type="module")
+block foot 
+  footer
+  .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
+    span.text-white Abschlussaufgabe by Tim Lehmann & Tobias Krumrein

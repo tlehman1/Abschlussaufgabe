@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  header
+
+  .container-fluid
+    p The element 
+      code
+        #{JSON.stringify(newpoi)} 
+    p has been added to the database
+    br
+    br
+    p Type /home to get to the Homepage again 
+    p Type /search to display the created POIs 
+    p Type /delete to to delete elements from the databank 
+
+
+block foot 
+  footer
+  .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
+    span.text-white Abschlussaufgabe by Tim Lehmann & Tobias Krumrein

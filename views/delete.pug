@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  header
+
+  
+  .container
+    .row 
+      .col.justify-content-md-center
+        form(action="/delete/deletedPoi" method="post")
+          fieldset 
+            label.col-sm-2.col-form-label(for="poiname") Enter POI Name to delete
+              .col-sm-6
+                input(type="text" name="pname" placeholder="Enter POI Name")
+            br
+            button.btn.btn-primary.mb-2(type="delete") Delete 
+        br
+        br
+      .col 
+        p #{elements} 
+
+
+block foot 
+  footer
+  .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
+    span.text-white Abschlussaufgabe by Tim Lehmann & Tobias Krumrein

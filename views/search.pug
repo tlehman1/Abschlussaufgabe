@@ -1,0 +1,37 @@
+extends layout
+
+
+block scripts
+  script.
+    let geojson = !{JSON.stringify(data)}
+  // Loading the API Keys (Mapbox and Here)
+  //script(src="/javascripts/apiKeys.js")
+  script(src="/javascripts/map06.js")
+
+block content
+  header
+
+  main
+    .container
+        .row-sm-4
+          #myfirstmap
+        .row 
+          h2
+          h2 Tabelle der bereits existierenden Gebirge
+          h3
+        .row
+          table#gtabelle.table.table-secondary.table-striped.table-hover
+                            tr
+                                th Id
+                                th Gebirge
+                                th Höhe
+                                th URL
+                                th Beschreibung
+                                th Koordinaten 
+
+ 
+
+block foot 
+  footer
+  .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
+    span.text-white Abschlussaufgabe by Tim Lehmann & Tobias Krumrein
